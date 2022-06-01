@@ -9,8 +9,10 @@ app.get("/", function(req, res) {
 })
 
 app.post("/", function(req, res) {
-    res.send("Thanks for posting that!");
-    console.log(req.body);
+    var num1 = req.body.num1;
+    var num2 = req.body.num2;
+    var result = num1 + num2;
+    console.log("The result of the calculation is " + result);
 })
 
 app.listen(3000, function() {
